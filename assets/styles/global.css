@@ -1,0 +1,47 @@
+:root {
+  font-size: 60%;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+body,
+input,
+button,
+textarea {
+  font-size: 1.6rem;
+  font-family: 'Didact Gothic', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* width: 100vw; */
+  height: 100vh;
+
+  color: #eee;
+  background: #292929;
+  /* background: #1a1a1a; */
+
+  transition: font-size 0.25s;
+}
+
+@media (max-width: 800px) {
+  :root {
+    font-size: 70%;
+  }
+}
+
+/* --primary-warm: #ffa759; */
+/* --primary-cold: #7bb0db; */
+/* --primary-rain: #c4cacf; */
