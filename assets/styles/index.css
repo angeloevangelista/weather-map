@@ -28,7 +28,8 @@
   /* box-shadow: 10px 10px 20px 20px rgba(0, 0, 0, 0.1); */
 }
 
-#app .app-header .logo > svg {
+#app .app-header .logo > svg,
+#app .app-header .logo > object {
   margin-right: 1rem;
 
   width: 3.4rem;
@@ -116,8 +117,148 @@
 }
 
 #app .container .right-container {
+  display: grid;
+  grid-template-rows: 1fr 4fr;
+
+  padding: 2rem;
+
   width: 100%;
   max-width: 700px;
+}
+
+#app .container .right-container #search-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-container {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0.8rem 1rem;
+
+  border-radius: 0.4rem;
+  background: #fff;
+
+  margin-bottom: 1rem;
+}
+
+.input-container input {
+  flex: 1;
+  height: 2.8rem;
+
+  color: #292929;
+
+  border: 0;
+  padding: 0.4rem 1rem;
+  outline-color: #fff;
+}
+
+.input-container input::placeholder {
+  color: #666;
+}
+
+.input-container svg {
+  color: #292929;
+  margin-left: 2rem;
+}
+
+#app .container .right-container .weather-long-info {
+  display: grid;
+  grid-template-rows: 1fr 3fr;
+}
+
+#app .container .right-container .weather-long-info > div {
+  flex: 1;
+  width: 100%;
+}
+
+#app .container .right-container .weather-long-info .maximum-minimum {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+#app .container .right-container .weather-long-info .maximum-minimum > div {
+  position: relative;
+
+  padding: 0 6rem;
+}
+
+#app .container .right-container .weather-long-info .maximum-minimum > div svg,
+#app
+  .container
+  .right-container
+  .weather-long-info
+  .maximum-minimum
+  > div
+  object {
+  width: 8rem;
+  height: 8rem;
+
+  margin: 1rem;
+}
+
+#app
+  .container
+  .right-container
+  .weather-long-info
+  .maximum-minimum
+  > div
+  span {
+  position: absolute;
+
+  top: 0;
+  right: 0;
+
+  font-size: 2.4rem;
+}
+
+#app .container .right-container .weather-long-info .general-info {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  flex-wrap: wrap;
+}
+
+#app .container .right-container .weather-long-info .general-info .info-card {
+  display: flex;
+  align-items: center;
+}
+
+#app
+  .container
+  .right-container
+  .weather-long-info
+  .general-info
+  .info-card
+  svg,
+#app
+  .container
+  .right-container
+  .weather-long-info
+  .general-info
+  .info-card
+  > object {
+  width: 6rem;
+  height: 6rem;
+
+  margin: 1rem;
+}
+
+#app
+  .container
+  .right-container
+  .weather-long-info
+  .general-info
+  .info-card
+  span {
+  font-weight: 700;
+  font-size: 2rem;
 }
 
 /* --------------------------------- */
