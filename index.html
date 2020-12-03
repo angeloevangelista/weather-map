@@ -91,8 +91,13 @@
 
     <script>
       if (feather) feather.replace();
+
+      const script = document.createElement('script');
+      script.type = 'module';
+      script.src = './assets/scripts/index.js';
+      document.querySelector('body').appendChild(script);
     </script>
-    <script type="text/javascript" src="./assets/scripts/index.functions.js"></script>
-    <script type="text/javascript" src="./assets/scripts/index.js"></script>
+    <!-- <script type="text/javascript" src="./assets/scripts/index.functions.js"></script> -->
+    <!-- <script type="text/javascript" src="./assets/scripts/index.js"></script> -->
   </body>
 </html>

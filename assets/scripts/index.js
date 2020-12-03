@@ -1,3 +1,5 @@
+import functions from './functions/index.js';
+
 let currentCity = '';
 
 const loadWeatherData = async (cityName) => {
@@ -36,11 +38,14 @@ const handleKeyUp = async ({ target: { value: cityName } }) => {
 
   if (!weatherData) return;
 
-  fillShortInformation(weatherData);
-  fillMinimumMaximum(weatherData);
-  fillLongInformation(weatherData);
+  functions.fillFields({
+    weatherData,
+    generalContainer: document.querySelector('.weather-short-info'),
+    minMaxContainer: document.querySelector('.maximum-minimum > div'),
+    detailedContainer: document.querySelector('.general-info'),
+  });
 };
 
 document
   .querySelector('input[name=city]')
-  .addEventListener('keyup', debounceEvent(handleKeyUp, 800));
+  .addEventListener('keyup', functions.debounceEvent(handleKeyUp, 800));
