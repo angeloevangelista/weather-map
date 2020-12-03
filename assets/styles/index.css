@@ -212,9 +212,9 @@
   position: absolute;
 
   top: 0;
-  right: 0;
+  right: -1rem;
 
-  font-size: 2.4rem;
+  font-size: 2rem;
 }
 
 #app .container .right-container .weather-long-info .general-info {
