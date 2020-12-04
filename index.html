@@ -21,7 +21,6 @@
 
     <link rel="stylesheet" href="./assets/styles/global.css" />
     <link rel="stylesheet" href="./assets/styles/index.css" />
-    <script src="https://unpkg.com/feather-icons"></script>
   </head>
   <body>
     <div id="app">
@@ -29,20 +28,13 @@
         <div class="left-container">
           <header class="app-header">
             <div class="logo">
-              <i data-feather="sun"></i>
+              <img class="svg" src="./assets/icons/fi-sun.svg" alt="Sol" />
 
               <div>
                 <strong>Weather</strong>
                 <span>Map</span>
               </div>
             </div>
-
-            <!-- <a
-              href="https://github.com/angeloevangelista"
-              class="github-anchor"
-            >
-              <i data-feather="github"></i>
-            </a> -->
           </header>
 
           <div class="weather-short-info" id="weather-short-info-container">
@@ -60,27 +52,42 @@
                 name="city"
                 placeholder="Digite aqui uma cidade para pesquisar"
               />
-              <i data-feather="search"></i>
+              <img src="./assets/icons/fi-search.svg" alt="Pesquisar" />
             </div>
           </form>
 
           <div class="weather-long-info" id="weather-long-info-container">
             <div class="maximum-minimum">
-              <div><i data-feather="sun"></i><span>??/??</span></div>
+              <div>
+                <img
+                  class="svg"
+                  src="./assets/icons/fi-sun.svg"
+                  alt="Sol"
+                /><span>??/??</span>
+              </div>
             </div>
 
             <div class="general-info">
               <div class="info-card">
-                <i data-feather="droplet"></i><span>?? %</span>
+                <img
+                  class="svg"
+                  src="./assets/icons/fi-droplet.svg"
+                  alt="Umidade"
+                /><span>?? %</span>
               </div>
               <div class="info-card">
-                <i data-feather="wind"></i><span>?? m/s</span>
+                <img
+                  class="svg"
+                  src="./assets/icons/fi-wind.svg"
+                  alt="Ventos"
+                /><span>?? m/s</span>
               </div>
               <div class="info-card">
-                <object
-                  data="./assets/icons/wi-barometer.svg"
-                  type="image/svg+xml"
-                ></object>
+                <img
+                  class="svg"
+                  src="./assets/icons/wi-barometer.svg"
+                  alt="Pressão"
+                />
                 <span>?? hPa</span>
               </div>
             </div>
@@ -90,8 +97,6 @@
     </div>
 
     <script>
-      if (feather) feather.replace();
-
       const script = document.createElement('script');
       script.type = 'module';
       script.src = './assets/scripts/index.js';

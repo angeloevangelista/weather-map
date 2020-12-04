@@ -28,8 +28,7 @@
   /* box-shadow: 10px 10px 20px 20px rgba(0, 0, 0, 0.1); */
 }
 
-#app .app-header .logo > svg,
-#app .app-header .logo > object {
+#app .app-header .logo > img {
   margin-right: 1rem;
 
   width: 3.4rem;
@@ -161,7 +160,7 @@
   color: #666;
 }
 
-.input-container svg {
+.input-container img {
   color: #292929;
   margin-left: 2rem;
 }
@@ -188,14 +187,7 @@
   padding: 0 6rem;
 }
 
-#app .container .right-container .weather-long-info .maximum-minimum > div svg,
-#app
-  .container
-  .right-container
-  .weather-long-info
-  .maximum-minimum
-  > div
-  object {
+#app .container .right-container .weather-long-info .maximum-minimum > div img {
   width: 8rem;
   height: 8rem;
 
@@ -236,14 +228,7 @@
   .weather-long-info
   .general-info
   .info-card
-  svg,
-#app
-  .container
-  .right-container
-  .weather-long-info
-  .general-info
-  .info-card
-  > object {
+  img {
   width: 6rem;
   height: 6rem;
 
@@ -259,6 +244,11 @@
   span {
   font-weight: 700;
   font-size: 2rem;
+}
+
+.svg {
+  filter: invert(97%) sepia(1%) saturate(325%) hue-rotate(16deg)
+    brightness(115%) contrast(87%);
 }
 
 /* --------------------------------- */
