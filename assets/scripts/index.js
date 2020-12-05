@@ -1,11 +1,17 @@
 import functions from './functions/index.js';
 
+const handleLoading = functions.getHandleLoading(
+  document.getElementById('loading-container'),
+);
+
 let currentCity = '';
 
 const loadWeatherData = async (cityName, coordinates = null) => {
   cityName = cityName.trim();
 
   if (!coordinates && cityName === currentCity) return;
+
+  handleLoading.add();
 
   const coordsParams = coordinates
     ? {
@@ -38,6 +44,8 @@ const loadWeatherData = async (cityName, coordinates = null) => {
     return await response.json();
   } catch (error) {
     console.error(error);
+  } finally {
+    handleLoading.remove();
   }
 };
 

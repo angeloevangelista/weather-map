@@ -1,5 +1,5 @@
 # Status
 
-This is still in progress of construction, but its already functional.
+Its working, but it's necessary to change the icons and background.
 
-**Right now**: Thinking if its interesting, or not, change all the icons to svg files.
+Translate the short description too.
